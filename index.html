@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliação da mentoria</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Fontes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>avalie a sua mentoria</h1>
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+        <img class="logo" src="assets/logo.svg" alt="logomarca" />
+      </header>
+
+      <form id="form-mentoring-evaluation">
+        <fieldset class="personal-information">
+          <div class="fieldset-wrapper">
+            <legend>Informações pessoais</legend>
+
+            <div class="input-wrapper">
+              <div class="wrapper-column-2">
+                <div class="column">
+                  <label for="name">Nome</label>
+                  <input id="name" type="text" required placeholder="Digite o seu primeiro nome!"
+                  title="Digite apenas o seu primeiro nome (campo OBRIGATÓRIO)! Ex..: Lucas "/>
+                </div>
+
+                <div class="column">
+                  <label for="surname">Sobrenome</label>
+                  <input id="surname" type="text" required placeholder="Digite o seu sobrenome inteiro!"
+                  title="Digite o seu sobrenome inteiro (campo OBRIGATÓRIO)! Ex..: da Silva Pereira"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="emal"
+                >Email <span>(digite um email válido)</span></label
+              >
+              <input id="email" type="email" required placeholder="Informe o seu E-mail para contato!"
+              title="Insira um E-mail para contato! campo OBRIGATÓRIO"/>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="mentor-information">
+          <div class="fieldset-wrapper">
+            <legend>Informações do mentor</legend>
+            
+            <div class="input-wrapper">
+              <hr>
+              <label for="mentor"
+                >Selecione quem foi o seu mentor</span></label
+              >
+              <select id="mentor" type="email" required title="Selecione o seu mentor (campo OBRIGATÓRIO)!">
+                <option value="">Selecione o seu mentor!</option>
+                <option value="Myke">Myke</option>
+                <option value="Birobiro">Birobiro</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="feedback"
+                >Feedback sobre o mentor</span></label
+              >
+              <textarea id="feedback" placeholder="Campo opcional!, este campo serve para o senho(a) avaliar o seviço de mentoria prestado por nós!"></textarea>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="checkbox">
+                <input id="clarified-doubts" type="checkbox">
+              <label for="clarified-doubts"
+                >Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label
+              >
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="scheduling-next-mentorship">
+          <div class="fieldset-wrapper">
+            <legend>Agendando próxima mentoria</legend>
+
+            <div class="input-wrapper">
+              <hr>
+              <div class="wrapper-column-3">
+                <div class="column">
+                  <label for="date">Data</label>
+                  <input id="date" type="date" />
+                </div>
+
+                <div class="column">
+                  <label for="start-time">Das</label>
+                  <input id="start-time" type="time" min="08:00" max="18:00" title="Atendimento realizado das 08:00 a 11:30 da manhã e das 13:30 ás 18:00 da tarde!"/>
+                </div>
+
+                <div class="column">
+                  <label for="end-time">Até</label>
+                  <input id="end-time" type="time" min="08:00" max="18:00"title="Atendimento realizado das 08:00 a 11:30 da manhã e das 13:30 ás 18:00 da tarde!"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <footer>
+        <button form="form-mentoring-evaluation">
+          Salvar
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
